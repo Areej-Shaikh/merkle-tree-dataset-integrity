@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+Movies_and_TV_5.json
+tampered.json
+saved_root.txt
