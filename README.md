@@ -1,29 +1,35 @@
-# Field Service Management System (FSMS)
+# Merkle Tree–Based Dataset Integrity Verification
 
-## Short Project Description
-The Field Service Management System (FSMS) is a Java-based desktop application designed to help service-based companies manage customer service requests, task assignments, field employee updates, work reports, feedback, and invoices in an organized way.
+This project implements a Merkle Tree–based system to verify the integrity of large-scale JSON datasets.  
+It detects data tampering (modification, deletion, insertion), supports partial Merkle root recomputation,
+generates cryptographic proofs, and evaluates performance on large datasets.
 
-The system provides separate roles for Admin, Customer, and Field Employee so that each user can perform tasks according to their responsibilities
+The implementation is designed to work efficiently with datasets containing up to 1.5 million records.
 
-## How to Run
+---
 
-1. Open the project folder in Visual Studio Code.
-2. Make sure Java JDK is installed on your system.
-3. Make sure the Java Extension Pack is installed in VS Code.
-4. Open the `Launcher.java` file.
-5. Click the Run button in VS Code to start the project.
+## Features
 
-## Key Features
+- SHA-256–based hashing of dataset records
+- Merkle Tree construction for large-scale datasets
+- Detection of data tampering (modify, delete, insert)
+- Partial Merkle root recomputation after tampering
+- Merkle proof generation and verification
+- Performance analysis (hashing speed, build time, memory usage)
+- Interactive menu-driven CLI
+- Streamlit-based interface for visualization
 
-- Role-based login for Admin, Customer, and Field Employee
-- Customer service request submission
-- Task assignment and management by Admin
-- Field employee task status updates
-- Task progress tracking
-- Assistance request feature for field employees
-- Customer approval or rejection of completed work
-- Feedback and complaint submission
-- Work report generation
-- Invoice generation for completed jobs
-- User management for customers and field employees
-- Simple and user-friendly desktop interface
+---
+
+## Dataset
+
+This project uses the *Amazon Movies & TV Reviews dataset (JSON format)*.
+
+- File name expected by the program: `Movies_and_TV_5.json`
+- Dataset size: up to 1.5 million records
+- Due to GitHub file size limitations, the dataset is *not included* in this repository.
+
+You can download the dataset from:  
+https://nijianmo.github.io/amazon/index.html
+
+After downloading, place the file in the project root directory before running the program.
